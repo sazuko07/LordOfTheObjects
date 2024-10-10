@@ -4,7 +4,7 @@ public abstract class Character {
 	private String name;
 	private int HP;
 	private int damage;
-	private int attackPower;
+	
 	
 	public Character() {}
 
@@ -52,12 +52,8 @@ public abstract class Character {
 		this.damage = damage;
 	}
 
-
-	public int getAttackPower() {
-		return attackPower;
-	}
-
-	public void setAttack(Character target) {
-		System.out.println(this.name );
+	public void attack(Character target) {
+		System.out.println(this.name + " attacks " + target.getName() + " for " + this.damage + " damage!");
+		target.takeDamage(this.damage);
 	}
 }

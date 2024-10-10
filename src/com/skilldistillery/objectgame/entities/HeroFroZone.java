@@ -3,6 +3,7 @@ package com.skilldistillery.objectgame.entities;
 import java.util.Objects;
 
 public class HeroFroZone extends Character{
+<<<<<<< HEAD
 		private String name; 
 		private int HP;
 		public String getName() {
@@ -32,4 +33,7 @@ public class HeroFroZone extends Character{
 			HeroFroZone other = (HeroFroZone) obj;
 			return HP == other.HP && Objects.equals(name, other.name);
 		}
+=======
+	
+>>>>>>> aeca28db012fec952ddb48cdd693acf19e54d51b
 }

@@ -5,6 +5,7 @@ import java.util.Objects;
 public abstract class Character {
 		private String name;
 		private int HP;
+<<<<<<< HEAD
 		public String getName() {
 			return name;
 		}
@@ -17,5 +18,9 @@ public abstract class Character {
 		public void setHP(int hP) {
 			HP = hP;
 		}
+=======
+		private int damage; 
+		private int attackPower; 
+>>>>>>> aeca28db012fec952ddb48cdd693acf19e54d51b
 }
 

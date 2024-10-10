@@ -5,6 +5,8 @@ public abstract class Character {
 	private int HP;
 	private int damage;
 	private int attackPower;
+	
+	public Character() {}
 
 	public Character(String name, int health, int damage) {
 		this.name = name;

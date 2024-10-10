@@ -5,8 +5,16 @@ import java.util.Objects;
 public class HeroFroZone extends Character {
 // <<<<<<< HEAD
 	private String name = "FroZone";
-
 	
+	Character SyndromeHP = new BadGuySyndrome(SyndromeHP);
+	
+	public void froZoneAttack() {
+		System.out.println("FroZone attacks Syndrome!");
+		int indexToDecrementHealth = 0;
+		if (indexToDecrementHealth >= 0 && indexToDecrementHealth < SyndromeHP.length) {
+				SyndromeHP[indexToDecrementHealth]--;
+		}
+	}
 	int FroZoneHP[] = new int[1];
 	{
 		FroZoneHP[0] = 3;

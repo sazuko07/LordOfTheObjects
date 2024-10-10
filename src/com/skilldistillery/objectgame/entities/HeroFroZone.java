@@ -6,12 +6,13 @@ public class HeroFroZone extends Character {
 // <<<<<<< HEAD
 	private String name = "FroZone";
 
+	
 	int FroZoneHP[] = new int[1];
 	{
 		FroZoneHP[0] = 3;
 	}
 
-	private int[] HP = FroZoneHP;
+	
 
 	public int[] getFroZoneHP() {
 		return FroZoneHP;

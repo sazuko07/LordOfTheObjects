@@ -3,6 +3,7 @@ package com.skilldistillery.objectgame.app;
 
 import com.skilldistillery.objectgame.entities.*;
 
+
 public class GameApp {
 //global variables and instances of the characters used
 	String userChoice = " ";
@@ -36,7 +37,7 @@ public class GameApp {
 					"dealing damage to him, and securing a piece of the sacred treasure. once you have the three pieces of ");
 			System.out.println("the sacred treasure, you win!");
 			System.out.println();
-			System.out.println("Now here is your riddle: ");
+			System.out.println("Now here is your first riddle: ");
 			riddle1();
 			cont1nue();
 			riddle2();
@@ -91,6 +92,8 @@ public class GameApp {
 
 //method for the first riddle
 	public void riddle1() {
+		System.out.println("Here is your next riddle: ");
+		System.out.println();
 		System.out.println("What has 88 keys?");
 		System.out.println("A) keyboard");
 		System.out.println("B) piano");
@@ -115,6 +118,8 @@ public class GameApp {
 
 //method for the second riddle
 	public void riddle2() {
+		System.out.println("Here is your next riddle: ");
+		System.out.println();
 		System.out.println(
 				"they came at night without being called, and are lost in the day without being stolen. what are they? ");
 		System.out.println("A) Dreams");
@@ -140,6 +145,8 @@ public class GameApp {
 
 //method for the third riddle
 	public void riddle3() {
+		System.out.println("Here is your next riddle: ");
+		System.out.println();
 		System.out.println("what can be lost, but never returned?");
 		System.out.println("A) life");
 		System.out.println("B) time");

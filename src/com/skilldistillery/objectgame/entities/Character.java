@@ -2,8 +2,8 @@ package com.skilldistillery.objectgame.entities;
 
 public abstract class Character {
 	private String name;
-	private int HP;
-	private int damage;
+	protected int HP;
+	protected int damage;
 	
 	
 	public Character() {}
@@ -16,8 +16,10 @@ public abstract class Character {
 	}
 
 	// Method to reduce health when taking damage
-	public void takeDamage(int amount) {
-		this.HP -= amount;
+	public void takeDamage(int damage) {
+		this.HP -= damage;
+		
+		// reduce hp but don't go under 0;
 		if (this.HP < 0) {
 			this.HP = 0;
 		}

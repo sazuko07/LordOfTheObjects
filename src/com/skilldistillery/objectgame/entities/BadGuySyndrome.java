@@ -17,6 +17,9 @@ public class BadGuySyndrome extends Character {
 		}
 		
 		this.setDamage(newDamage);
+		
+		System.out.println(this.getName() +" loses treasure and now has " + this.treasure + " treasures left!");
+		System.out.println(this.getName() + " damage is now " + this.getDamage());
 	}
 	
 	Random hitOrMiss = new Random();
@@ -29,6 +32,9 @@ public class BadGuySyndrome extends Character {
 		if (hit) {
 			System.out.println(this.getName() + " strikes 1 deal of damage and takes your treasure");
 			frozone.takeDamage(1); 
+			
+			// bad guy also loses one treasure
+			loseTreasure(); 
 		} else {
 			System.out.println("HA YOU MISS " + this.getName());
 		}

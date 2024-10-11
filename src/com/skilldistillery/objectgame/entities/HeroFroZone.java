@@ -2,7 +2,7 @@ package com.skilldistillery.objectgame.entities;
 
 public class HeroFroZone extends Character{
 	protected int treasure = 0;
-	protected int HP = 3; 
+	// protected int HP = 3; 
 	public int getTreasure() {
 		return treasure;
 	}

@@ -39,7 +39,14 @@ import com.skilldistillery.objectgame.entities.Character;
 					scanner.close();
 					System.exit(0);
 				}
+		}	
+	public void cont1nue() {
+		if (userChoice.equalsIgnoreCase("piano") || userChoice.equalsIgnoreCase("Stars") || userChoice.equalsIgnoreCase("Life")) {
+			System.out.println("you have won" +froZone.getTreasure() +" treasures so far,");
 		}
+		
+	}
+		
 	public void riddle1() {
 			System.out.println("What has 88 keys?");
 			System.out.println("A) keyboard");
@@ -53,6 +60,9 @@ import com.skilldistillery.objectgame.entities.Character;
 				System.out.println("You are correct! ");
 				froZone.attack(syndrome);
 				froZone.gainTreasure();
+				syndrome.takeDamage(1);
+				System.out.println("Syndrom has been weakened! However, he gets back up and continues the game");
+				System.out.println("Syndrome has" +syndrome.getHealth() +" health left");
 			}
 				else {
 					System.out.println("You have answered incorrectly... the villain attacks!");
@@ -61,6 +71,54 @@ import com.skilldistillery.objectgame.entities.Character;
 					System.out.println("FroZone has" +froZone.getHealth() +" health left");
 			}
 			}
+	public void riddle2() {
+			System.out.println("they came at night without being called, and are lost in the day without being stolen. what are they? ");
+			System.out.println("A) Dreams");
+			System.out.println("B) Mist");
+			System.out.println("C) Stars");
+			System.out.println("D) Shadows");
+			System.out.println();
+			System.out.println("Please type your 1-word answer: ");
+			userChoice = scanner.nextLine();
+			if (userChoice.equalsIgnoreCase("Stars")) {
+				System.out.println("You are correct! ");
+				froZone.attack(syndrome);
+				froZone.gainTreasure();
+				syndrome.takeDamage(1);
+				System.out.println("Syndrom has been weakened! However, he gets back up and continues the game");
+				System.out.println("Syndrome has" +syndrome.getHealth() +" health left");
+			}
+				else {
+				System.out.println("You have answered incorrectly... the villain attacks!");
+				syndrome.attack(froZone);
+				froZone.takeDamage(1);
+				System.out.println("FroZone has" +froZone.getHealth() +" health left");
 		}
+	}
+	public void riddle3() {
+			System.out.println("what can be lost, but never returned?");
+			System.out.println("A) life");
+			System.out.println("B) time");
+			System.out.println("C) trust");
+			System.out.println("D) youth");
+			System.out.println();
+			System.out.println("Please type your 1-word answer: ");
+			userChoice = scanner.nextLine();
+			if (userChoice.equalsIgnoreCase("life")) {
+				System.out.println("You are correct! ");
+				froZone.attack(syndrome);
+				froZone.gainTreasure();
+				syndrome.takeDamage(1);
+				System.out.println("Syndrom has been weakened! However, he gets back up and continues the game");
+				System.out.println("Syndrome has" +syndrome.getHealth() +" health left");
+			}
+				else {
+				System.out.println("You have answered incorrectly... the villain attacks!");
+				syndrome.attack(froZone);
+				froZone.takeDamage(1);
+				System.out.println("FroZone has" +froZone.getHealth() +" health left");
+				}
+	}
+}		
 	
 

@@ -102,7 +102,6 @@ public class GameApp {
 			System.out.println("You are correct! ");
 			froZone.attack(syndrome);
 			froZone.gainTreasure();
-			syndrome.takeDamage(1);
 			System.out.println("Syndrom has been weakened! However, he gets back up and continues the game");
 			System.out.println("Syndrome has" + syndrome.getHealth() + " health left");
 		} else {
@@ -128,7 +127,6 @@ public class GameApp {
 			System.out.println("You are correct! ");
 			froZone.attack(syndrome);
 			froZone.gainTreasure();
-			syndrome.takeDamage(1);
 			System.out.println("Syndrom has been weakened! However, he gets back up and continues the game");
 			System.out.println("Syndrome has" + syndrome.getHealth() + " health left");
 		} else {
@@ -153,7 +151,6 @@ public class GameApp {
 			System.out.println("You are correct! ");
 			froZone.attack(syndrome);
 			froZone.gainTreasure();
-			syndrome.takeDamage(1);
 			System.out.println("Syndrom has been weakened! However, he gets back up and continues the game");
 			System.out.println("Syndrome has" + syndrome.getHealth() + " health left");
 		} else {
@@ -162,5 +159,25 @@ public class GameApp {
 			froZone.takeDamage(1);
 			System.out.println("FroZone has" + froZone.getHealth() + " health left");
 		}
+		
+	}
+//method to loop through the game again, after attempting all 3 riddles, if the player hasnt gained all 3 pieces of treasure
+	public void continueToGainTreasure() {
+		if (froZone.checkTreasure(treasure) != 3);
+			System.out.println("You still havent gathered the 3 pieces of the sacred treasure. If Metroville is to ");
+			System.out.println("stand a chance against Syndrome, you must continue your quest!");
+			riddle1();
+			checkForLoss();
+			checkForWin();
+			cont1nue();
+			riddle2();
+			checkForLoss();
+			checkForWin();
+			cont1nue();
+			riddle3();
+			checkForLoss();
+			checkForWin();
+			checkForLoss();
+			checkForWin();
 	}
 }

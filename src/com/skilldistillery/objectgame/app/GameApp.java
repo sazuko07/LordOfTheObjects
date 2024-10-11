@@ -177,7 +177,6 @@ public class GameApp {
 			riddle3();
 			checkForLoss();
 			checkForWin();
-			checkForLoss();
-			checkForWin();
+			
 	}
 }

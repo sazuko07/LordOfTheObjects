@@ -6,7 +6,7 @@ import com.skilldistillery.objectgame.entities.Character;
 		
 		String userChoice = " ";
 		HeroFroZone froZone = new HeroFroZone("HeroFroZone", 3, 1, 0);
-		BadGuySyndrome syndrome = new BadGuySyndrome("BadGuySyndrome", 3, 1, 3);
+		BadGuySyndrome syndrome = new BadGuySyndrome("BadGuySyndrome", 3, 1);
 		java.util.Scanner scanner = new java.util.Scanner(System.in); 
 		
 		public static void main(String[] args){

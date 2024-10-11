@@ -79,7 +79,7 @@ public class GameApp {
 	public void cont1nue() {
 		if (userChoice.equalsIgnoreCase("piano") || userChoice.equalsIgnoreCase("Stars")
 				|| userChoice.equalsIgnoreCase("Life")) {
-			System.out.println("you have won" + froZone.getTreasure()
+			System.out.println("you have won " + froZone.getTreasure()
 					+ " treasures so far, but you have yet to collect 3 pieces!");
 			System.out.println("your trials and tribulations continue!");
 			System.out.println("Here is your next riddle: ");

@@ -20,9 +20,10 @@ public class HeroFroZone extends Character {
 
 	public void takeDamage(int amount) {
 		this.HP -= amount;
-		if (this.HP < 0) {
-			this.HP = 0;
+		if (this.HP <= 3 && HP != 0) {
+		HP--;
 		}
+	
 	}
 
 	// method to just check the number of "treasures" that Frozone has accumulated

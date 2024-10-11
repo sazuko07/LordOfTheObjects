@@ -3,15 +3,15 @@ package com.skilldistillery.objectgame.entities;
 public abstract class Character {
 	private String name;
 	protected int HP;
-	protected int damage;
+	
 	
 	
 	public Character() {}
 
-	public Character(String name, int health, int damage) {
+	public Character(String name, int health) {
 		this.name = name;
 		this.HP = health;
-		this.damage = damage;
+		
 
 	}
 

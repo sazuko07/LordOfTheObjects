@@ -2,21 +2,22 @@
 package com.skilldistillery.objectgame.app;
 
 import com.skilldistillery.objectgame.entities.*;
-import com.skilldistillery.objectgame.entities.Character;
 
 public class GameApp {
-
+//global variables and instances of the characters used
 	String userChoice = " ";
 	HeroFroZone froZone = new HeroFroZone("HeroFroZone", 3, 1, 0);
 	BadGuySyndrome syndrome = new BadGuySyndrome("BadGuySyndrome", 3, 1);
 	java.util.Scanner scanner = new java.util.Scanner(System.in);
 	public int treasure = froZone.checkTreasure(0);
 
+//main static method that starts running the program
 	public static void main(String[] args) {
 		GameApp game = new GameApp();
 		game.run();
 	}
 
+//main program body to run the game. the game is of linear design
 	public void run() {
 
 		System.out.println("Welcome to Riddles & Rogues! The survival game of riddles...");
@@ -50,6 +51,7 @@ public class GameApp {
 		}
 	}
 
+//method to check for win condition
 	public void checkForWin() {
 		if (froZone.checkTreasure(treasure) == 3)
 			;
@@ -61,6 +63,7 @@ public class GameApp {
 		System.exit(0);
 	}
 
+//method to check to see if the hero has any health left (if health is 0, the player loses and the game ends)
 	public void checkForLoss() {
 		if (froZone.getHealth() == 0)
 			;
@@ -72,6 +75,7 @@ public class GameApp {
 		System.exit(0);
 	}
 
+//method to continue through to the next riddle if the correct answer is given
 	public void cont1nue() {
 		if (userChoice.equalsIgnoreCase("piano") || userChoice.equalsIgnoreCase("Stars")
 				|| userChoice.equalsIgnoreCase("Life")) {
@@ -84,6 +88,7 @@ public class GameApp {
 
 	}
 
+//method for the first riddle
 	public void riddle1() {
 		System.out.println("What has 88 keys?");
 		System.out.println("A) keyboard");
@@ -108,6 +113,7 @@ public class GameApp {
 		}
 	}
 
+//method for the second riddle
 	public void riddle2() {
 		System.out.println(
 				"they came at night without being called, and are lost in the day without being stolen. what are they? ");
@@ -133,6 +139,7 @@ public class GameApp {
 		}
 	}
 
+//method for the third riddle
 	public void riddle3() {
 		System.out.println("what can be lost, but never returned?");
 		System.out.println("A) life");

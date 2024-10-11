@@ -16,8 +16,10 @@ public abstract class Character {
 	}
 
 	// Method to reduce health when taking damage
-	public void takeDamage(int amount) {
-		this.HP -= amount;
+	public void takeDamage(int damage) {
+		this.HP -= damage;
+		
+		// reduce hp but don't go under 0;
 		if (this.HP < 0) {
 			this.HP = 0;
 		}

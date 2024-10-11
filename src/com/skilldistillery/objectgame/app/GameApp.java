@@ -53,7 +53,7 @@ public class GameApp {
 
 //method to check for win condition
 	public void checkForWin() {
-		if (froZone.checkTreasure() == 3) {
+		if (froZone.checkTreasure() == 3 && syndrome.getHealth() == 0) {
 			System.out.println("You have assembled all 3 pieces of the sacred treasure! you have defeated");
 			System.out.println(" Syndrome and saved Metroville from his tyranny!");
 			System.out.println();
@@ -102,7 +102,6 @@ public class GameApp {
 		} else {
 			System.out.println("You have answered incorrectly... the villain attacks!");
 			syndrome.attack(froZone);
-			froZone.takeDamage(1);
 			System.out.println("FroZone has" + froZone.getHealth() + " health left");
 		}
 	}
@@ -126,7 +125,6 @@ public class GameApp {
 		} else {
 			System.out.println("You have answered incorrectly... the villain attacks!");
 			syndrome.attack(froZone);
-			froZone.takeDamage(1);
 			System.out.println("FroZone has" + froZone.getHealth() + " health left");
 		}
 	}
@@ -149,7 +147,6 @@ public class GameApp {
 		} else {
 			System.out.println("You have answered incorrectly... the villain attacks!");
 			syndrome.attack(froZone);
-			froZone.takeDamage(1);
 			System.out.println("FroZone has" + froZone.getHealth() + " health left");
 		}
 

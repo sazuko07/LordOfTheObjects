@@ -42,7 +42,7 @@ public class GameApp {
 			riddle2();
 			cont1nue();
 			riddle3();
-			checkForWin();
+			checkForWinOrLose();
 			continueToGainTreasure();
 		} else {
 			System.out.println("That's a shame. Maybe next time! ");
@@ -52,7 +52,7 @@ public class GameApp {
 	}
 
 //method to check for win condition
-	public void checkForWin() {
+	public void checkForWinOrLose() {
 		if (froZone.checkTreasure() == 3 && syndrome.getHealth() == 0) {
 			System.out.println("You have assembled all 3 pieces of the sacred treasure! you have defeated");
 			System.out.println(" Syndrome and saved Metroville from his tyranny!");
@@ -60,12 +60,18 @@ public class GameApp {
 			System.out.println("You win!");
 			scanner.close();
 			System.exit(0);
-		} else {
+		}
+	
+		else if  
+			(froZone.getHealth() == 0) {
+			System.out.println("Despite their valliant effort, froZone has fallen in the defense of Metroville...");	
+		}
+		else {
 			System.out.println("you have won " + froZone.getTreasure()
-					+ " treasures so far, but you have yet to collect 3 pieces!");
-			System.out.println("your trials and tribulations continue!");
-			System.out.println("Here is your next riddle: ");
-			System.out.println();
+			+ " treasures so far, but you have yet to collect 3 pieces!");
+	System.out.println("your trials and tribulations continue!");
+	System.out.println("Here is your next riddle: ");
+	System.out.println();
 		}
 	}
 
@@ -102,7 +108,7 @@ public class GameApp {
 		} else {
 			System.out.println("You have answered incorrectly... the villain attacks!");
 			syndrome.attack(froZone);
-			System.out.println("FroZone has" + froZone.getHealth() + " health left");
+			System.out.println("FroZone has " + froZone.getHealth() + " health left");
 		}
 	}
 
@@ -125,7 +131,7 @@ public class GameApp {
 		} else {
 			System.out.println("You have answered incorrectly... the villain attacks!");
 			syndrome.attack(froZone);
-			System.out.println("FroZone has" + froZone.getHealth() + " health left");
+			System.out.println("FroZone has " + froZone.getHealth() + " health left");
 		}
 	}
 
@@ -147,7 +153,7 @@ public class GameApp {
 		} else {
 			System.out.println("You have answered incorrectly... the villain attacks!");
 			syndrome.attack(froZone);
-			System.out.println("FroZone has" + froZone.getHealth() + " health left");
+			System.out.println("FroZone has " + froZone.getHealth() + " health left");
 		}
 
 	}
@@ -159,13 +165,13 @@ public class GameApp {
 		System.out.println("You still havent gathered the 3 pieces of the sacred treasure. If Metroville is to ");
 		System.out.println("stand a chance against Syndrome, you must continue your quest!");
 		riddle1();
-		checkForWin();
+		checkForWinOrLose();
 		cont1nue();
 		riddle2();
-		checkForWin();
+		checkForWinOrLose();
 		cont1nue();
 		riddle3();
-		checkForWin();
+		checkForWinOrLose();
 
 	}
 }

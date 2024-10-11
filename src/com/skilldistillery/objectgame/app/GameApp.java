@@ -9,7 +9,7 @@ public class GameApp {
 	HeroFroZone froZone = new HeroFroZone("HeroFroZone", 3, 1, 0);
 	BadGuySyndrome syndrome = new BadGuySyndrome("BadGuySyndrome", 3, 1);
 	java.util.Scanner scanner = new java.util.Scanner(System.in);
-	public int treasure = froZone.checkTreasure(0);
+	
 
 //main static method that starts running the program
 	public static void main(String[] args) {
@@ -42,7 +42,6 @@ public class GameApp {
 			riddle2();
 			cont1nue();
 			riddle3();
-			checkForLoss();
 			checkForWin();
 			continueToGainTreasure();
 		} else {
@@ -54,7 +53,7 @@ public class GameApp {
 
 //method to check for win condition
 	public void checkForWin() {
-		if (froZone.checkTreasure(treasure) == 3) {
+		if (froZone.checkTreasure() == 3) {
 			System.out.println("You have assembled all 3 pieces of the sacred treasure! you have defeated");
 			System.out.println(" Syndrome and saved Metroville from his tyranny!");
 			System.out.println();
@@ -70,23 +69,7 @@ public class GameApp {
 		}
 	}
 
-//method to check to see if the hero has any health left (if health is 0, the player loses and the game ends)
-	public void checkForLoss() {
-		if (froZone.getHealth() == 0) {
-			System.out.println("Despite FroZone's valliant efforts, he has fallen before gaining the three ");
-			System.out.println("pieces of the sacred treasure. Villainy has triumphed....");
-			System.out.println();
-			System.out.println("You lose...");
-			scanner.close();
-			System.exit(0);
-		} else {
-			System.out.println("you have won " + froZone.getTreasure()
-					+ " treasures so far, but you have yet to collect 3 pieces!");
-			System.out.println("your trials and tribulations continue!");
-			System.out.println("Here is your next riddle: ");
-			System.out.println();
-		}
-	}
+
 
 //method to continue through to the next riddle if the correct answer is given
 	public void cont1nue() {
@@ -115,8 +98,7 @@ public class GameApp {
 			System.out.println("You are correct! ");
 			froZone.attack(syndrome);
 			froZone.gainTreasure();
-			System.out.println("Syndrom has been weakened! However, he gets back up and continues the game");
-			System.out.println("Syndrome has" + syndrome.getHealth() + " health left");
+			System.out.println("Syndrome has " + syndrome.getHealth() + " health left");
 		} else {
 			System.out.println("You have answered incorrectly... the villain attacks!");
 			syndrome.attack(froZone);
@@ -140,8 +122,7 @@ public class GameApp {
 			System.out.println("You are correct! ");
 			froZone.attack(syndrome);
 			froZone.gainTreasure();
-			System.out.println("Syndrom has been weakened! However, he gets back up and continues the game");
-			System.out.println("Syndrome has" + syndrome.getHealth() + " health left");
+			System.out.println("Syndrome has " + syndrome.getHealth() + " health left");
 		} else {
 			System.out.println("You have answered incorrectly... the villain attacks!");
 			syndrome.attack(froZone);
@@ -164,8 +145,7 @@ public class GameApp {
 			System.out.println("You are correct! ");
 			froZone.attack(syndrome);
 			froZone.gainTreasure();
-			System.out.println("Syndrom has been weakened! However, he gets back up and continues the game");
-			System.out.println("Syndrome has" + syndrome.getHealth() + " health left");
+			System.out.println("Syndrome has " + syndrome.getHealth() + " health left");
 		} else {
 			System.out.println("You have answered incorrectly... the villain attacks!");
 			syndrome.attack(froZone);
@@ -177,20 +157,17 @@ public class GameApp {
 
 //method to loop through the game again, after attempting all 3 riddles, if the player hasnt gained all 3 pieces of treasure
 	public void continueToGainTreasure() {
-		if (froZone.checkTreasure(treasure) != 3)
+		if (froZone.checkTreasure() != 3)
 			;
 		System.out.println("You still havent gathered the 3 pieces of the sacred treasure. If Metroville is to ");
 		System.out.println("stand a chance against Syndrome, you must continue your quest!");
 		riddle1();
-		checkForLoss();
 		checkForWin();
 		cont1nue();
 		riddle2();
-		checkForLoss();
 		checkForWin();
 		cont1nue();
 		riddle3();
-		checkForLoss();
 		checkForWin();
 
 	}

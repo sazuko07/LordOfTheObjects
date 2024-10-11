@@ -19,7 +19,7 @@ public class HeroFroZone extends Character {
 	}
 
 	public void takeDamage(int amount) {
-//		this.HP -= amount;
+		this.HP -= amount;
 		if (this.HP <= 3 && HP != 0) {
 		HP--;
 		}

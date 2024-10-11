@@ -21,10 +21,15 @@ public class HeroFroZone extends Character{
 			this.HP = 0;
 		}
 	}
-	public void gainTreasure() {
+	public int checkTreasure(int treasure) {
+		return treasure;
+		
+	}
+	public int gainTreasure() {
 		if (this.treasure < 3);
 			treasure++;
 		System.out.println("FroZone has gained a piece of the sacred treasure!");
+		return treasure; 
 	}
 	
 	@Override

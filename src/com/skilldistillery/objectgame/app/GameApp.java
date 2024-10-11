@@ -8,7 +8,7 @@ import com.skilldistillery.objectgame.entities.Character;
 		HeroFroZone froZone = new HeroFroZone("HeroFroZone", 3, 1, 0);
 		BadGuySyndrome syndrome = new BadGuySyndrome("BadGuySyndrome", 3, 1);
 		java.util.Scanner scanner = new java.util.Scanner(System.in); 
-		
+		public int treasure = froZone.checkTreasure(0); 
 		public static void main(String[] args){
 			GameApp game = new GameApp();
 			game.run();
@@ -31,18 +31,45 @@ import com.skilldistillery.objectgame.entities.Character;
 				System.out.println("dealing damage to him, and securing a piece of the sacred treasure. once you have the three pieces of ");
 				System.out.println("the sacred treasure, you win!");
 				System.out.println();
-				System.out.println("Now here is your first riddle: ");
+				System.out.println("Now here is your riddle: ");
 				riddle1();
+				cont1nue();
+				riddle2();
+				cont1nue();
+				riddle3();
+				checkForLoss();
+				checkForWin();
 			}
 				else {
 					System.out.println("That's a shame. Maybe next time! ");
 					scanner.close();
 					System.exit(0);
 				}
-		}	
+	}
+	public void checkForWin() {
+		   	if (froZone.checkTreasure(treasure) == 3);
+		   		System.out.println("You have assembled all 3 pieces of the sacred treasure! you have defeated");
+		   		System.out.println(" Syndrome and saved Metroville from his tyranny!");
+		   		System.out.println();
+		   		System.out.println("You win!");
+		   		scanner.close();
+		   		System.exit(0);
+	}
+	public void checkForLoss() {
+			if (froZone.getHealth() == 0);
+				System.out.println("Despite FroZone's valliant efforts, he has fallen before gaining the three ");
+				System.out.println("pieces of the sacred treasure. Villainy has triumphed....");
+				System.out.println();
+				System.out.println("You lose...");
+				scanner.close();
+				System.exit(0);
+	}
 	public void cont1nue() {
 		if (userChoice.equalsIgnoreCase("piano") || userChoice.equalsIgnoreCase("Stars") || userChoice.equalsIgnoreCase("Life")) {
-			System.out.println("you have won" +froZone.getTreasure() +" treasures so far,");
+			System.out.println("you have won" +froZone.getTreasure() +" treasures so far, but you have yet to collect 3 pieces!");
+			System.out.println("your trials and tribulations continue!");
+			System.out.println("Here is your next riddle: ");
+			System.out.println();
 		}
 		
 	}

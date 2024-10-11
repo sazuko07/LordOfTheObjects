@@ -34,6 +34,20 @@ import com.skilldistillery.objectgame.entities.Character;
 					scanner.close();
 					System.exit(0);
 				}
+			System.out.println("What has 88 keys?");
+			System.out.println("A) keyboard");
+			System.out.println("B) piano");
+			System.out.println("C) lockbox");
+			System.out.println("D) case");
+			System.out.println();
+			System.out.println("Please type out your 1-word answer: ");
+			userChoice = scanner.nextLine();
+			if (userChoice.equalsIgnoreCase("piano")) {
+				System.out.println("You are correct! ");
+				froZone.attack(syndrome);
+				syndrome.takeDamage(1);
+				
+			}
 			}
 		}
 	

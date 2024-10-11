@@ -18,4 +18,5 @@ public class HeroFroZone extends Character{
 		System.out.println("HeroFroZone is successful! He strikes BadGuySyndrome for 1 point of damage!");
 		BadGuySyndrome.takeDamage(1);
 	}
+	
 }

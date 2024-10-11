@@ -11,7 +11,7 @@ public class BadGuySyndrome extends Character {
 		// ran in the if statment 
 		
 		if (hit) {
-			System.out.println(this.getName() + " strikes 1 deal of damage");
+			System.out.println(this.getName() + " strikes 1 point of damage");
 			target.takeDamage(1); 
 		} else {
 			System.out.println("HA YOU MISS " + this.getName());

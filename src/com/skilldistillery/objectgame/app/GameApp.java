@@ -32,6 +32,7 @@ import com.skilldistillery.objectgame.entities.Character;
 				System.out.println("the sacred treasure, you win!");
 				System.out.println();
 				System.out.println("Now here is your first riddle: ");
+				riddle1();
 			}
 				else {
 					System.out.println("That's a shame. Maybe next time! ");

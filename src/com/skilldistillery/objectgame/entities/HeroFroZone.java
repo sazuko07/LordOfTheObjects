@@ -1,7 +1,8 @@
 package com.skilldistillery.objectgame.entities;
 
 public class HeroFroZone extends Character{
-	protected int treasure = 0; 
+	protected int treasure = 0;
+	protected int HP = 3; 
 	public HeroFroZone(String name, int health, int damage, int treasure) {
 		super(name, health, damage);	
 	}

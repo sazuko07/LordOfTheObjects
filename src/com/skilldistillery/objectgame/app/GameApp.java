@@ -44,6 +44,7 @@ public class GameApp {
 			riddle3();
 			checkForLoss();
 			checkForWin();
+			continueToGainTreasure();
 		} else {
 			System.out.println("That's a shame. Maybe next time! ");
 			scanner.close();

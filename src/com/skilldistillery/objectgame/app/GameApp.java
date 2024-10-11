@@ -10,7 +10,7 @@ import com.skilldistillery.objectgame.entities.Character;
 
 		public void run() {
 			String userChoice = " ";
-			HeroFroZone froZone = new HeroFroZone("HeroFroZone", 3, 1);
+			HeroFroZone froZone = new HeroFroZone("HeroFroZone", 3, 1, 0);
 			BadGuySyndrome syndrome = new BadGuySyndrome("BadGuySyndrome", 3, 1, 3);
 			java.util.Scanner scanner = new java.util.Scanner(System.in); 
 			System.out.println("Welcome to Riddles & Rogues! The survival game of riddles...");
@@ -45,8 +45,11 @@ import com.skilldistillery.objectgame.entities.Character;
 			if (userChoice.equalsIgnoreCase("piano")) {
 				System.out.println("You are correct! ");
 				froZone.attack(syndrome);
-				syndrome.takeDamage(1);
-				
+				syndrome.loseTreasure();
+			}
+				else {
+					System.out.println("You have answered incorrectly... the villain attacks!");
+					syndrome.attack(froZone);
 			}
 			}
 		}

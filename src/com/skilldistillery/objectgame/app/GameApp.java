@@ -45,7 +45,7 @@ import com.skilldistillery.objectgame.entities.Character;
 			if (userChoice.equalsIgnoreCase("piano")) {
 				System.out.println("You are correct! ");
 				froZone.attack(syndrome);
-				froZone.gainTreasure(1);
+				froZone.gainTreasure();
 			}
 				else {
 					System.out.println("You have answered incorrectly... the villain attacks!");

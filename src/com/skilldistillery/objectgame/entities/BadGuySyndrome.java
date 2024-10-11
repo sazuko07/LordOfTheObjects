@@ -19,8 +19,15 @@ public class BadGuySyndrome extends Character {
 			System.out.println("HA YOU MISS " + this.getName());
 		}
 	}
+	
+	public void takeDamage(int amount) {
+		this.HP -= amount;
+		if (this.HP < 0) {
+			this.HP = 0;
+		}
+	}
 
-	public BadGuySyndrome(String name, int health, int damage, int treasure) {
+	public BadGuySyndrome(String name, int health, int damage) {
 		super(name, health, damage);
 		// TODO Auto-generated constructor stub
 		

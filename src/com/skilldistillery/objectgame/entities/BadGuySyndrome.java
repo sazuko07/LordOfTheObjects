@@ -32,9 +32,9 @@ public class BadGuySyndrome extends Character {
 		if (hit) {
 			System.out.println(this.getName() + " strikes 1 deal of damage and takes your treasure");
 			frozone.takeDamage(1); 
-			
 			// bad guy also loses one treasure
 			loseTreasure(); 
+
 		} else {
 			System.out.println("HA YOU MISS " + this.getName());
 		}

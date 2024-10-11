@@ -6,12 +6,14 @@ public abstract class Character {
 	protected int damage;
 	
 	
+	
 	public Character() {}
 
 	public Character(String name, int health, int damage) {
 		this.name = name;
 		this.HP = health;
 		this.damage = damage;
+		
 
 	}
 

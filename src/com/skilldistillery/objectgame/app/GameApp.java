@@ -1,6 +1,7 @@
 
 	package com.skilldistillery.objectgame.app;
 	import com.skilldistillery.objectgame.entities.*;
+import com.skilldistillery.objectgame.entities.Character;
 	public class GameApp{
 		public static void main(String[] args){
 			GameApp game = new GameApp();
@@ -9,6 +10,8 @@
 
 		public void run() {
 			String userChoice = " ";
+			HeroFroZone froZone = new HeroFroZone("HeroFroZone", 3, 1);
+			BadGuySyndrome syndrome = new BadGuySyndrome("BadGuySyndrome", 3, 1, 3);
 			java.util.Scanner scanner = new java.util.Scanner(System.in); 
 			System.out.println("Welcome to Riddles & Rogues! The survival game of riddles...");
 			System.out.println("You, FroZone, the hero, will be faced with several riddles, and if you ");
@@ -17,6 +20,21 @@
 			System.out.println();
 			System.out.println("Would you like to play? Answer yes or no: ");
 			userChoice = scanner.nextLine();
+			
+			if (userChoice.equalsIgnoreCase("yes")) {
+				System.out.println("Then let's begin! your trials and tribulations await!");
+				System.out.println("Riddles will come with a list of possible answers. Guess correctly, and you strike the bad guy, ");
+				System.out.println("dealing damage to him, and securing a piece of the sacred treasure. once you have the three pieces of ");
+				System.out.println("the sacred treasure, you win!");
+				System.out.println();
+				System.out.println("Now here is your first riddle: ");
+			}
+				else {
+					System.out.println("That's a shame. Maybe next time! ");
+					scanner.close();
+					System.exit(0);
+				}
+			}
 		}
-	}
+	
 

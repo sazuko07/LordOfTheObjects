@@ -42,7 +42,7 @@ super(name, health, damage);
 
 	
 	public void takeDamage(int amount) {
-		this.HP -= amount;
+//		this.HP -= amount;
 		if (this.HP <= 3 && HP != 0) {
 		HP--;
 		}

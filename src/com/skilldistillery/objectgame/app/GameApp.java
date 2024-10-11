@@ -3,7 +3,6 @@ package com.skilldistillery.objectgame.app;
 
 import com.skilldistillery.objectgame.entities.*;
 
-
 public class GameApp {
 //global variables and instances of the characters used
 	String userChoice = " ";
@@ -55,26 +54,38 @@ public class GameApp {
 
 //method to check for win condition
 	public void checkForWin() {
-		if (froZone.checkTreasure(treasure) == 3)
-			;
-		System.out.println("You have assembled all 3 pieces of the sacred treasure! you have defeated");
-		System.out.println(" Syndrome and saved Metroville from his tyranny!");
-		System.out.println();
-		System.out.println("You win!");
-		scanner.close();
-		System.exit(0);
+		if (froZone.checkTreasure(treasure) == 3) {
+			System.out.println("You have assembled all 3 pieces of the sacred treasure! you have defeated");
+			System.out.println(" Syndrome and saved Metroville from his tyranny!");
+			System.out.println();
+			System.out.println("You win!");
+			scanner.close();
+			System.exit(0);
+		} else {
+			System.out.println("you have won " + froZone.getTreasure()
+					+ " treasures so far, but you have yet to collect 3 pieces!");
+			System.out.println("your trials and tribulations continue!");
+			System.out.println("Here is your next riddle: ");
+			System.out.println();
+		}
 	}
 
 //method to check to see if the hero has any health left (if health is 0, the player loses and the game ends)
 	public void checkForLoss() {
-		if (froZone.getHealth() == 0)
-			;
-		System.out.println("Despite FroZone's valliant efforts, he has fallen before gaining the three ");
-		System.out.println("pieces of the sacred treasure. Villainy has triumphed....");
-		System.out.println();
-		System.out.println("You lose...");
-		scanner.close();
-		System.exit(0);
+		if (froZone.getHealth() == 0) {
+			System.out.println("Despite FroZone's valliant efforts, he has fallen before gaining the three ");
+			System.out.println("pieces of the sacred treasure. Villainy has triumphed....");
+			System.out.println();
+			System.out.println("You lose...");
+			scanner.close();
+			System.exit(0);
+		} else {
+			System.out.println("you have won " + froZone.getTreasure()
+					+ " treasures so far, but you have yet to collect 3 pieces!");
+			System.out.println("your trials and tribulations continue!");
+			System.out.println("Here is your next riddle: ");
+			System.out.println();
+		}
 	}
 
 //method to continue through to the next riddle if the correct answer is given
@@ -92,8 +103,6 @@ public class GameApp {
 
 //method for the first riddle
 	public void riddle1() {
-		System.out.println("Here is your next riddle: ");
-		System.out.println();
 		System.out.println("What has 88 keys?");
 		System.out.println("A) keyboard");
 		System.out.println("B) piano");
@@ -118,8 +127,6 @@ public class GameApp {
 
 //method for the second riddle
 	public void riddle2() {
-		System.out.println("Here is your next riddle: ");
-		System.out.println();
 		System.out.println(
 				"they came at night without being called, and are lost in the day without being stolen. what are they? ");
 		System.out.println("A) Dreams");
@@ -145,8 +152,6 @@ public class GameApp {
 
 //method for the third riddle
 	public void riddle3() {
-		System.out.println("Here is your next riddle: ");
-		System.out.println();
 		System.out.println("what can be lost, but never returned?");
 		System.out.println("A) life");
 		System.out.println("B) time");
@@ -167,24 +172,26 @@ public class GameApp {
 			froZone.takeDamage(1);
 			System.out.println("FroZone has" + froZone.getHealth() + " health left");
 		}
-		
+
 	}
+
 //method to loop through the game again, after attempting all 3 riddles, if the player hasnt gained all 3 pieces of treasure
 	public void continueToGainTreasure() {
-		if (froZone.checkTreasure(treasure) != 3);
-			System.out.println("You still havent gathered the 3 pieces of the sacred treasure. If Metroville is to ");
-			System.out.println("stand a chance against Syndrome, you must continue your quest!");
-			riddle1();
-			checkForLoss();
-			checkForWin();
-			cont1nue();
-			riddle2();
-			checkForLoss();
-			checkForWin();
-			cont1nue();
-			riddle3();
-			checkForLoss();
-			checkForWin();
-			
+		if (froZone.checkTreasure(treasure) != 3)
+			;
+		System.out.println("You still havent gathered the 3 pieces of the sacred treasure. If Metroville is to ");
+		System.out.println("stand a chance against Syndrome, you must continue your quest!");
+		riddle1();
+		checkForLoss();
+		checkForWin();
+		cont1nue();
+		riddle2();
+		checkForLoss();
+		checkForWin();
+		cont1nue();
+		riddle3();
+		checkForLoss();
+		checkForWin();
+
 	}
 }

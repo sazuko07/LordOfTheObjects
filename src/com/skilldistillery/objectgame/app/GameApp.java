@@ -64,7 +64,11 @@ public class GameApp {
 	
 		else if  
 			(froZone.getHealth() == 0) {
-			System.out.println("Despite their valliant effort, froZone has fallen in the defense of Metroville...");	
+			System.out.println("Despite their valliant effort, froZone has fallen in the defense of Metroville...");
+			System.out.println();
+			System.out.println("You lose...");
+			scanner.close();
+			System.exit(0);
 		}
 		else {
 			System.out.println("you have won " + froZone.getTreasure()

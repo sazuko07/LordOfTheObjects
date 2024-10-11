@@ -20,13 +20,6 @@ public class BadGuySyndrome extends Character {
 		}
 	}
 	
-	public void takeDamage(int amount) {
-		this.HP -= amount;
-		if (this.HP < 0) {
-			this.HP = 0;
-		}
-	}
-
 	public BadGuySyndrome(String name, int health, int damage) {
 		super(name, health, damage);
 		// TODO Auto-generated constructor stub

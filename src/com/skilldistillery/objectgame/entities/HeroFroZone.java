@@ -15,6 +15,7 @@ public class HeroFroZone extends Character{
 	public void gainTreasure() {
 		if (this.treasure < 3);
 			treasure++;
+		System.out.println("FroZone has gained a piece of the sacred treasure!");
 	}
 	
 	@Override

@@ -3,16 +3,20 @@
 	import com.skilldistillery.objectgame.entities.*;
 import com.skilldistillery.objectgame.entities.Character;
 	public class GameApp{
+		
+		String userChoice = " ";
+		HeroFroZone froZone = new HeroFroZone("HeroFroZone", 3, 1, 0);
+		BadGuySyndrome syndrome = new BadGuySyndrome("BadGuySyndrome", 3, 1, 3);
+		java.util.Scanner scanner = new java.util.Scanner(System.in); 
+		
 		public static void main(String[] args){
 			GameApp game = new GameApp();
 			game.run();
 		}
 
+	
 		public void run() {
-			String userChoice = " ";
-			HeroFroZone froZone = new HeroFroZone("HeroFroZone", 3, 1, 0);
-			BadGuySyndrome syndrome = new BadGuySyndrome("BadGuySyndrome", 3, 1, 3);
-			java.util.Scanner scanner = new java.util.Scanner(System.in); 
+			
 			System.out.println("Welcome to Riddles & Rogues! The survival game of riddles...");
 			System.out.println("You, FroZone, the hero, will be faced with several riddles, and if you ");
 			System.out.println("succeed in answering them correctly, will be able to defeat your rival, Syndrome, and ");
@@ -34,6 +38,8 @@ import com.skilldistillery.objectgame.entities.Character;
 					scanner.close();
 					System.exit(0);
 				}
+		}
+	public void riddle1() {
 			System.out.println("What has 88 keys?");
 			System.out.println("A) keyboard");
 			System.out.println("B) piano");
@@ -50,6 +56,8 @@ import com.skilldistillery.objectgame.entities.Character;
 				else {
 					System.out.println("You have answered incorrectly... the villain attacks!");
 					syndrome.attack(froZone);
+					froZone.takeDamage(1);
+					System.out.println("FroZone has" +froZone.getHealth() +" health left");
 			}
 			}
 		}

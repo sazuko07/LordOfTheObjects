@@ -109,11 +109,13 @@ public class GameApp {
 			System.out.println("You are correct! ");
 			froZone.attack(syndrome);
 			froZone.gainTreasure();
+			checkForWinOrLose();
 			System.out.println("Syndrome has " + syndrome.getHealth() + " health left");
 		} else {
 			System.out.println("You have answered incorrectly... the villain attacks!");
 			syndrome.attack(froZone);
 			System.out.println("FroZone has " + froZone.getHealth() + " health left");
+			checkForWinOrLose();
 		}
 	}
 
@@ -132,11 +134,13 @@ public class GameApp {
 			System.out.println("You are correct! ");
 			froZone.attack(syndrome);
 			froZone.gainTreasure();
+			checkForWinOrLose();
 			System.out.println("Syndrome has " + syndrome.getHealth() + " health left");
 		} else {
 			System.out.println("You have answered incorrectly... the villain attacks!");
 			syndrome.attack(froZone);
 			System.out.println("FroZone has " + froZone.getHealth() + " health left");
+			checkForWinOrLose();
 		}
 	}
 
@@ -154,11 +158,13 @@ public class GameApp {
 			System.out.println("You are correct! ");
 			froZone.attack(syndrome);
 			froZone.gainTreasure();
+			checkForWinOrLose();
 			System.out.println("Syndrome has " + syndrome.getHealth() + " health left");
 		} else {
 			System.out.println("You have answered incorrectly... the villain attacks!");
 			syndrome.attack(froZone);
 			System.out.println("FroZone has " + froZone.getHealth() + " health left");
+			checkForWinOrLose();
 		}
 	}
 	
@@ -169,10 +175,8 @@ public class GameApp {
 		System.out.println("You still havent gathered the 3 pieces of the sacred treasure. If Metroville is to ");
 		System.out.println("stand a chance against Syndrome, you must continue your quest!");
 		riddle1();
-		checkForWinOrLose();
 		cont1nue();
 		riddle2();
-		checkForWinOrLose();
 		cont1nue();
 		riddle3();
 		checkForWinOrLose();

@@ -70,13 +70,7 @@ public class GameApp {
 			scanner.close();
 			System.exit(0);
 		}
-//		else {
-//			System.out.println("you have won " + froZone.getTreasure()
-//			+ " treasures so far, but you have yet to collect 3 pieces!");
-//	System.out.println("your trials and tribulations continue!");
-//	System.out.println("Here is your next riddle: ");
-//	System.out.println();
-//		}
+
 	}
 
 
@@ -109,13 +103,15 @@ public class GameApp {
 			System.out.println("You are correct! ");
 			froZone.attack(syndrome);
 			froZone.gainTreasure();
+			checkForWinOrLose();
 			System.out.println("Syndrome has " + syndrome.getHealth() + " health left");
 		} else {
 			System.out.println("You have answered incorrectly... the villain attacks!");
 			syndrome.attack(froZone);
 			System.out.println("FroZone has " + froZone.getHealth() + " health left");
+			checkForWinOrLose();
 		}
-		checkForWinOrLose();
+		
 	}
 
 //method for the second riddle
@@ -133,13 +129,15 @@ public class GameApp {
 			System.out.println("You are correct! ");
 			froZone.attack(syndrome);
 			froZone.gainTreasure();
+			checkForWinOrLose();
 			System.out.println("Syndrome has " + syndrome.getHealth() + " health left");
 		} else {
 			System.out.println("You have answered incorrectly... the villain attacks!");
 			syndrome.attack(froZone);
 			System.out.println("FroZone has " + froZone.getHealth() + " health left");
+			checkForWinOrLose();
 		}
-		checkForWinOrLose();
+		
 	}
 
 //method for the third riddle
@@ -156,13 +154,15 @@ public class GameApp {
 			System.out.println("You are correct! ");
 			froZone.attack(syndrome);
 			froZone.gainTreasure();
+			checkForWinOrLose();
 			System.out.println("Syndrome has " + syndrome.getHealth() + " health left");
 		} else {
 			System.out.println("You have answered incorrectly... the villain attacks!");
 			syndrome.attack(froZone);
 			System.out.println("FroZone has " + froZone.getHealth() + " health left");
+			checkForWinOrLose();
 		}
-		checkForWinOrLose();
+		
 	}
 	
 

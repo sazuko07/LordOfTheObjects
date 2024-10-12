@@ -5,10 +5,11 @@ import java.util.Random;
 public class BadGuySyndrome extends Character { 
 
 	Random hitOrMiss = new Random();
-	boolean hit = hitOrMiss.nextBoolean();
+	
 	
 	public void attack(Character frozone) {
 		// generates a random true or false giving us 50% chance this hit will be true or false when 
+		boolean hit = hitOrMiss.nextBoolean();
 		// ran in the if statement 
 		
 		if (hit) {
@@ -17,7 +18,9 @@ public class BadGuySyndrome extends Character {
 
 		} else {
 			System.out.println("HA YOU MISS " + this.getName());
+		
 		}
+		
 	}
 	
 	public BadGuySyndrome(String name, int health, int damage) {

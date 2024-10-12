@@ -38,9 +38,9 @@ public class GameApp {
 			System.out.println();
 			System.out.println("Now here is your first riddle: ");
 			riddle1();
-			cont1nue();
+//			cont1nue();
 			riddle2();
-			cont1nue();
+//			cont1nue();
 			riddle3();
 			checkForWinOrLose();
 			continueToGainTreasure();
@@ -70,26 +70,23 @@ public class GameApp {
 			scanner.close();
 			System.exit(0);
 		}
-		else {
-			cont1nue();
-		}
 	}
 
 
 
 //method to continue through to the next riddle if the correct answer is given
-	public void cont1nue() {
-		if (froZone.getTreasure() < 3 || froZone.getHealth() > 0 || syndrome.getHealth() > 0) {
-			System.out.println("you have won " + froZone.getTreasure()
-					+ " treasures so far, but you have yet to collect 3 pieces!");
-			System.out.println("your trials and tribulations continue!");
-			System.out.println("Here is your next riddle: ");
-			System.out.println();
-		}
-		else {
-			checkForWinOrLose();
-		}
-	}
+//	public void cont1nue() {
+//		if (froZone.getTreasure() < 3 || froZone.getHealth() > 0 || syndrome.getHealth() > 0) {
+//			System.out.println("you have won " + froZone.getTreasure()
+//					+ " treasures so far, but you have yet to collect 3 pieces!");
+//			System.out.println("your trials and tribulations continue!");
+//			System.out.println("Here is your next riddle: ");
+//			System.out.println();
+//		}
+//		else {
+//			checkForWinOrLose();
+//		}
+//	}
 	
 //method for the first riddle
 	public void riddle1() {
@@ -174,9 +171,9 @@ public class GameApp {
 		System.out.println("You still havent gathered the 3 pieces of the sacred treasure. If Metroville is to ");
 		System.out.println("stand a chance against Syndrome, you must continue your quest!");
 		riddle1();
-		cont1nue();
+//		cont1nue();
 		riddle2();
-		cont1nue();
+//		cont1nue();
 		riddle3();
 		checkForWinOrLose();
 	}

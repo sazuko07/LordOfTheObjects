@@ -53,7 +53,7 @@ public class GameApp {
 
 //method to check to see if the player has lost the game, or has won
 	public void checkForWinOrLose() {
-		if (froZone.checkTreasure() == 3 && /*syndrome.getHealth()*/ !syndrome.isAlive()) {
+		if (froZone.checkTreasure() == 3 && syndrome.getHealth() == 0) {
 			System.out.println("You have assembled all 3 pieces of the sacred treasure! you have defeated");
 			System.out.println(" Syndrome and saved Metroville from his tyranny!");
 			System.out.println();
@@ -63,7 +63,7 @@ public class GameApp {
 		}
 	
 		else if  
-			(/*froZone.getHealth() == 0)*/ !froZone.isAlive()) {
+			(froZone.getHealth() == 0) {
 			System.out.println("Despite their valliant effort, froZone has fallen in the defense of Metroville...");
 			System.out.println();
 			System.out.println("You lose...");

@@ -91,9 +91,8 @@ public class GameApp {
 			System.out.println("Here is your next riddle: ");
 			System.out.println();
 		}
-
 	}
-
+	
 //method for the first riddle
 	public void riddle1() {
 		System.out.println("What has 88 keys?");
@@ -159,12 +158,12 @@ public class GameApp {
 			syndrome.attack(froZone);
 			System.out.println("FroZone has " + froZone.getHealth() + " health left");
 		}
-
 	}
+	
 
 //method to loop through the game again, after attempting all 3 riddles, if the player hasnt gained all 3 pieces of treasure
 	public void continueToGainTreasure() {
-		if (froZone.checkTreasure() != 3 && syndrome.getHealth() != 0);
+		if (froZone.checkTreasure() != 3 && syndrome.getHealth() != 0) {
 		System.out.println("You still havent gathered the 3 pieces of the sacred treasure. If Metroville is to ");
 		System.out.println("stand a chance against Syndrome, you must continue your quest!");
 		riddle1();
@@ -175,6 +174,9 @@ public class GameApp {
 		cont1nue();
 		riddle3();
 		checkForWinOrLose();
-
+	}
+		else {
+			checkForWinOrLose();
+		}
 	}
 }

@@ -164,8 +164,7 @@ public class GameApp {
 
 //method to loop through the game again, after attempting all 3 riddles, if the player hasnt gained all 3 pieces of treasure
 	public void continueToGainTreasure() {
-		if (froZone.checkTreasure() != 3)
-			;
+		if (froZone.checkTreasure() != 3 && syndrome.getHealth() != 0);
 		System.out.println("You still havent gathered the 3 pieces of the sacred treasure. If Metroville is to ");
 		System.out.println("stand a chance against Syndrome, you must continue your quest!");
 		riddle1();

@@ -91,6 +91,9 @@ public class GameApp {
 			System.out.println("Here is your next riddle: ");
 			System.out.println();
 		}
+		else {
+			checkForWinOrLose();
+		}
 	}
 	
 //method for the first riddle

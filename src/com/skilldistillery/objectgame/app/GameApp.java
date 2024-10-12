@@ -63,7 +63,7 @@ public class GameApp {
 		}
 	
 		else if  
-			(froZone.getHealth() == 0 && froZone.getTreasure() != 3) {
+			(froZone.getHealth() == 0) {
 			System.out.println("Despite their valliant effort, froZone has fallen in the defense of Metroville...");
 			System.out.println();
 			System.out.println("You lose...");
@@ -83,8 +83,7 @@ public class GameApp {
 
 //method to continue through to the next riddle if the correct answer is given
 	public void cont1nue() {
-		if (userChoice.equalsIgnoreCase("piano") || userChoice.equalsIgnoreCase("Stars")
-				|| userChoice.equalsIgnoreCase("Life")) {
+		if (froZone.getTreasure() < 3 && froZone.getHealth() > 0 && syndrome.getHealth() > 0) {
 			System.out.println("you have won " + froZone.getTreasure()
 					+ " treasures so far, but you have yet to collect 3 pieces!");
 			System.out.println("your trials and tribulations continue!");

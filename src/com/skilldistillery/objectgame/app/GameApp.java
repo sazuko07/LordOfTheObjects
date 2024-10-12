@@ -83,7 +83,7 @@ public class GameApp {
 
 //method to continue through to the next riddle if the correct answer is given
 	public void cont1nue() {
-		if (froZone.getTreasure() < 3 && froZone.getHealth() > 0 && syndrome.getHealth() > 0) {
+		if (froZone.getTreasure() < 3 || froZone.getHealth() > 0 || syndrome.getHealth() > 0) {
 			System.out.println("you have won " + froZone.getTreasure()
 					+ " treasures so far, but you have yet to collect 3 pieces!");
 			System.out.println("your trials and tribulations continue!");

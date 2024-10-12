@@ -3,10 +3,7 @@ package com.skilldistillery.objectgame.entities;
 //class that extends the abstract "character" class
 public class HeroFroZone extends Character {
 	protected int treasure = 0;
-//	private String name;
-//	private int health;
-//	private int damage;
-//	
+
 //getters and setters
 public int getTreasure() {
 	return treasure;
@@ -22,9 +19,9 @@ super(name, health, damage);
 
 
 
-	
+//method for each character to take damage	
 	public void takeDamage(int amount) {
-//		this.HP -= amount;
+
 		if (this.HP <= 3 && HP != 0) {
 		HP--;
 		}
